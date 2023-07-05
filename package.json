@@ -1,0 +1,22 @@
+{
+  "name": "react-native-easy-lib",
+  "version": "1.0.0",
+  "description": "Minimal monorepo setup for your next React Native library",
+  "keywords": [
+    "react-native",
+    "react-native-web",
+    "android",
+    "kotlin",
+    "ios",
+    "swift",
+    "monorepo",
+    "template"
+  ],
+  "repository": "https://github.com/jpudysz/react-native-easy-lib",
+  "author": "Jacek Pudysz <jacekpudysz@gmail.com> (https://github.com/jpudysz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpudysz/react-native-easy-lib/issues"
+  },
+  "homepage": "https://github.com/jpudysz/react-native-easy-lib#readme"
+}
