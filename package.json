@@ -2,6 +2,10 @@
   "name": "react-native-easy-lib",
   "version": "1.0.0",
   "description": "Minimal monorepo setup for your next React Native library",
+  "scripts": {
+    "generate:bare": "./scripts/generate-bare.sh",
+    "generate:expo": "./scripts/generate-expo.sh"
+  },
   "keywords": [
     "react-native",
     "react-native-web",
