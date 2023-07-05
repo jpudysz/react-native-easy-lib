@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": [
+    "codemask"
+  ],
+  "rules": {
+    "jsdoc/newline-after-description": 0
+  }
+}

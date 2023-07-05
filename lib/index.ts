@@ -1,13 +1,7 @@
-import { NativeModules, Platform } from 'react-native'
-
-const LINKING_ERROR =
-    `The package 'react-native-easy-lib' doesn't seem to be linked. Make sure: \n\n` +
-    Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-    '- You rebuilt the app after installing the package\n' +
-    '- You are not using Expo Go\n'
+import { NativeModules } from 'react-native'
 
 // @ts-expect-error
-const isTurboModuleEnabled = global.__turboModuleProxy != null
+const isTurboModuleEnabled = global.__turboModuleProxy !== null // eslint-disable-line no-underscore-dangle
 const IsEasyLibModule = isTurboModuleEnabled
     ? require('./NativeEasyLib').default
     : NativeModules.EasyLib
@@ -17,8 +11,8 @@ const EasyLibModule = IsEasyLibModule
     : new Proxy(
         {},
         {
-            get() {
-                throw new Error(LINKING_ERROR)
+            get: () => {
+                throw new Error(`The package 'react-native-easy-lib' doesn't seem to be linked`)
             }
         }
     )
