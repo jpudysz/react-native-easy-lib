@@ -6,7 +6,9 @@
     "generate:bare": "./scripts/generate-bare.sh",
     "generate:expo": "./scripts/generate-expo.sh",
     "check:tsc": "node_modules/typescript/bin/tsc --noEmit",
-    "check:lint": "eslint \"**/*.{js,ts,tsx}\""
+    "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "precommit": "concurrently 'yarn check:tsc' 'yarn check:lint'",
+    "prepare": "husky install"
   },
   "keywords": [
     "react-native",
@@ -31,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "5.61.0",
     "@typescript-eslint/eslint-plugin-tslint": "5.61.0",
     "@typescript-eslint/parser": "5.61.0",
+    "concurrently": "8.2.0",
     "eslint": "8.44.0",
     "eslint-config-codemask": "1.1.5",
     "eslint-plugin-functional": "5.0.8",
@@ -43,6 +46,7 @@
     "eslint-plugin-prefer-arrow": "1.2.3",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
     "typescript": "5.1.6"
   },
   "dependencies": {
