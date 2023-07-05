@@ -1,6 +1,13 @@
+.vscode
 .idea
+.DS_Store
 
 examples/bare_*
 examples/expo_*
 
 node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+generated

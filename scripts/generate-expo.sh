@@ -8,16 +8,16 @@ echo "👾 Generating example project with Expo 👾"
 
 if [ "$1" = "--sdk" ]; then
   if [ $# -lt 2 ] || [ -z "$2" ]; then
-      echo "Invalid argument. Check available arguments with --help"
-      exit 1
+    echo "Invalid argument. Check available arguments with --help"
+    exit 1
   else
-      sdk="$2"
+    sdk="$2"
   fi
 else
-    if ! [ $# -eq 0 ]; then
-      echo "Invalid argument. Check available arguments with --help"
-      exit 1
-    fi
+  if ! [ $# -eq 0 ]; then
+    echo "Invalid argument. Check available arguments with --help"
+    exit 1
+  fi
 fi
 
 echo "🗑️ Cleanup examples/expo"

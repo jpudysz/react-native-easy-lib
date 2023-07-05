@@ -8,16 +8,16 @@ echo "👾 Generating example project with bare React Native 👾"
 
 if [ "$1" = "--version" ]; then
   if [ $# -lt 2 ] || [ -z "$2" ]; then
-      echo "Invalid argument. Check available arguments with --help"
-      exit 1
+    echo "Invalid argument. Check available arguments with --help"
+    exit 1
   else
-      version="$2"
+    version="$2"
   fi
 else
-    if ! [ $# -eq 0 ]; then
-      echo "Invalid argument. Check available arguments with --help"
-      exit 1
-    fi
+  if ! [ $# -eq 0 ]; then
+    echo "Invalid argument. Check available arguments with --help"
+    exit 1
+  fi
 fi
 
 echo "🗑️ Cleanup examples/bare"
