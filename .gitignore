@@ -1,3 +1,6 @@
+.idea
+
 examples/bare_*
 examples/expo_*
-.idea
+
+node_modules

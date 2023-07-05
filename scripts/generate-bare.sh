@@ -35,5 +35,3 @@ else
 fi
 
 # todo copy shared, link library
-
-
