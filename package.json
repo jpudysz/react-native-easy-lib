@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-lib",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
   "description": "Minimal monorepo setup for your next React Native library",
   "scripts": {
     "generate:package": "bob build",
@@ -10,7 +10,7 @@
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "precommit": "concurrently 'yarn check:tsc' 'yarn check:lint'",
     "prepare": "husky install",
-    "release": "release-it minor --preRelease=alpha"
+    "release": "release-it patch --preRelease=alpha"
   },
   "codegenConfig": {
     "name": "RNEasyEnvSpec",
@@ -101,7 +101,7 @@
   ],
   "release-it": {
     "git": {
-      "requireCleanWorkingDir": true,
+      "requireCleanWorkingDir": false,
       "tagName": "v${version}",
       "commitMessage": "chore: release ${version}"
     },
