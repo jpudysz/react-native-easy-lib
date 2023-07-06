@@ -117,5 +117,8 @@
         "preset": "angular"
       }
     }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
