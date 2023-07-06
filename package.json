@@ -9,7 +9,13 @@
     "check:tsc": "node_modules/typescript/bin/tsc --noEmit",
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "precommit": "concurrently 'yarn check:tsc' 'yarn check:lint'",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "release-it minor --preRelease=alpha"
+  },
+  "codegenConfig": {
+    "name": "RNEasyEnvSpec",
+    "type": "modules",
+    "jsSrcsDir": "lib"
   },
   "react-native-builder-bob": {
     "source": "lib",
@@ -25,6 +31,17 @@
       ]
     ]
   },
+  "files": [
+    "lib",
+    "generated",
+    "react-native-easy-lib.podspec",
+    "!lib/android/build",
+    "!lib/ios/build",
+    "!lib/android/gradle",
+    "!lib/android/gradlew",
+    "!lib/android/gradlew.bat",
+    "!lib/android/local.properties"
+  ],
   "keywords": [
     "react-native",
     "react-native-web",
@@ -49,6 +66,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.6",
     "@commitlint/config-conventional": "17.6.6",
+    "@release-it/conventional-changelog": "6.0.0",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@typescript-eslint/eslint-plugin": "5.61.0",
@@ -69,6 +87,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.3",
     "react-native-builder-bob": "0.21.2",
+    "release-it": "16.0.0",
     "typescript": "5.1.6"
   },
   "dependencies": {
@@ -79,5 +98,24 @@
     "node_modules/",
     "scripts/",
     "generated/"
-  ]
+  ],
+  "release-it": {
+    "git": {
+      "requireCleanWorkingDir": true,
+      "tagName": "v${version}",
+      "commitMessage": "chore: release ${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true,
+      "releaseName": "Release ${version}"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  }
 }
