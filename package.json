@@ -3,12 +3,27 @@
   "version": "1.0.0",
   "description": "Minimal monorepo setup for your next React Native library",
   "scripts": {
+    "generate:package": "bob build",
     "generate:bare": "./scripts/generate-bare.sh",
     "generate:expo": "./scripts/generate-expo.sh",
     "check:tsc": "node_modules/typescript/bin/tsc --noEmit",
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "precommit": "concurrently 'yarn check:tsc' 'yarn check:lint'",
     "prepare": "husky install"
+  },
+  "react-native-builder-bob": {
+    "source": "lib",
+    "output": "generated",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
   },
   "keywords": [
     "react-native",
@@ -20,6 +35,10 @@
     "monorepo",
     "template"
   ],
+  "main": "./generated/commonjs/index",
+  "module": "./generated/module/index",
+  "types": "./generated/typescript/index.d.ts",
+  "react-native": "./lib/index",
   "repository": "https://github.com/jpudysz/react-native-easy-lib",
   "author": "Jacek Pudysz <jacekpudysz@gmail.com> (https://github.com/jpudysz)",
   "license": "MIT",
@@ -28,6 +47,8 @@
   },
   "homepage": "https://github.com/jpudysz/react-native-easy-lib#readme",
   "devDependencies": {
+    "@commitlint/cli": "17.6.6",
+    "@commitlint/config-conventional": "17.6.6",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@typescript-eslint/eslint-plugin": "5.61.0",
@@ -47,10 +68,16 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.3",
+    "react-native-builder-bob": "0.21.2",
     "typescript": "5.1.6"
   },
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.72.1"
-  }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "scripts/",
+    "generated/"
+  ]
 }
