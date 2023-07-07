@@ -1969,7 +1969,7 @@
     invariant "^2.2.4"
     nullthrows "^1.1.1"
 
-"@release-it/conventional-changelog@^6.0.0":
+"@release-it/conventional-changelog@6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@release-it/conventional-changelog/-/conventional-changelog-6.0.0.tgz#f1e764f5f6a9626ae44a75646bb1690e657c0454"
   integrity sha512-OOiHhDncIFaNVfKJHpNQQkvM1yI5UPvyCtS74d6BDjvqWRu74J4cBGWh8b0owY4k3TTiR2BMKHn1eZ7hrxCnrA==
@@ -6812,6 +6812,11 @@ pkg-dir@^3.0.0:
   integrity sha512-/E57AYkoeQ25qkxMj5PBOVgF8Kiu/h7cYS30Z5+R7WaiCCBfLq58ZI/dSeaEKb9WVJV5n/03QwrN3IeWIFllvw==
   dependencies:
     find-up "^3.0.0"
+
+pod-install@^0.1.38:
+  version "0.1.38"
+  resolved "https://registry.yarnpkg.com/pod-install/-/pod-install-0.1.38.tgz#1c16a800a5fc1abea0cafcc0e190f376368c76ab"
+  integrity sha512-NeDWGigjJRriOIKBOvpW2/tK2tYLfyUT7ia6C6L+oarCAhBNP+IGODWdU+GEAqvfsseqOApcFclpXAJTL0UPzA==
 
 prelude-ls@^1.2.1:
   version "1.2.1"

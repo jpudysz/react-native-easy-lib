@@ -13,7 +13,7 @@
     "release": "release-it patch --preRelease=alpha"
   },
   "codegenConfig": {
-    "name": "RNEasyEnvSpec",
+    "name": "EasyLibPackage",
     "type": "modules",
     "jsSrcsDir": "lib"
   },
@@ -86,6 +86,7 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.3",
+    "pod-install": "0.1.38",
     "react-native-builder-bob": "0.21.2",
     "release-it": "16.0.0",
     "typescript": "5.1.6"
@@ -94,10 +95,16 @@
     "react": "18.2.0",
     "react-native": "0.72.1"
   },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
   "eslintIgnore": [
     "node_modules/",
     "scripts/",
-    "generated/"
+    "generated/",
+    "examples",
+    "!examples/shared"
   ],
   "release-it": {
     "git": {

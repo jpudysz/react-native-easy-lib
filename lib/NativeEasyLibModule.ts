@@ -5,4 +5,4 @@ export interface Spec extends TurboModule {
     asyncFunction(): Promise<boolean>
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('EasyLib')
+export default TurboModuleRegistry.getEnforcing<Spec>('EasyLibModule')

@@ -1,6 +1,7 @@
 require "json"
 
 package = JSON.parse(File.read(File.join(__dir__, "package.json")))
+new_arch_enabled = ENV['RCT_NEW_ARCH_ENABLED'] == '1'
 
 Pod::Spec.new do |s|
   s.name         = package["name"]
@@ -10,10 +11,23 @@ Pod::Spec.new do |s|
   s.license      = package["license"]
   s.authors      = package["author"]
 
-  s.platforms    = { :ios => "13.0" }
+  s.platforms    = { :ios => "12.4" }
   s.source       = { :git => "https://github.com/jpudysz/react-native-easy-lib.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m,mm}"
+  s.source_files = "lib/ios/**/*.{h,m,mm,swift}"
+
+  if new_arch_enabled
+    s.pod_target_xcconfig = {
+      "DEFINES_MODULE" => "YES",
+      "SWIFT_OBJC_INTERFACE_HEADER_NAME" => "EasyLibPackage-Swift.h",
+       "OTHER_SWIFT_FLAGS" => "-DRN_NEW_ARCH_ENABLED"
+    }
+  else
+    s.pod_target_xcconfig = {
+      "DEFINES_MODULE" => "YES",
+      "SWIFT_OBJC_INTERFACE_HEADER_NAME" => "EasyLibPackage-Swift.h"
+    }
+  end
 
   install_modules_dependencies(s)
 end

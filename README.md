@@ -9,3 +9,9 @@ By leveraging this setup, you can significantly reduce development time as it au
 You can dive straight into developing your native library using `Swift` and `Kotlin` without worrying about the configuration.
 
 Repo provides a minimal setup for one synchronous function and one asynchronous function, allowing you to quickly get started on building your library.
+
+### Requirements:
+
+* @react-native/metro-config
+* React Native >= 0.72
+* Expo SDK 49 with dev-client
