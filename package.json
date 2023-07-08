@@ -15,7 +15,10 @@
   "codegenConfig": {
     "name": "EasyLibPackage",
     "type": "modules",
-    "jsSrcsDir": "lib"
+    "jsSrcsDir": "lib",
+    "android": {
+      "javaPackageName": "com.easylibpackage"
+    }
   },
   "react-native-builder-bob": {
     "source": "lib",
