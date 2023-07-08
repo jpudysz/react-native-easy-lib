@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-lib",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "Minimal monorepo setup for your next React Native library",
   "scripts": {
     "generate:package": "bob build",
