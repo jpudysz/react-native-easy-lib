@@ -38,11 +38,13 @@ fi
 
 cd $folder_name
 
-shared_folder="../shared/bare"
+app_folder="../shared/app"
+bare_folder="../shared/bare"
 
 echo "✂️  Copying shared folder"
 
-find "$shared_folder" -type f -exec cp -p {} . \;
+cp -rp "$app_folder"/* .
+find "$bare_folder" -type f -exec cp -p {} . \;
 
 echo "🔗  Linking native code"
 
