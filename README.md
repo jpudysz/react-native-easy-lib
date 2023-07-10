@@ -20,10 +20,10 @@ Repo provides a minimal setup for one synchronous function and one asynchronous 
 - [x] Working POC
 
 ### Beta
-- [ ] use bashly to improve sh scripts
-- [ ] add info about examples limitions - RN 72.0 with new metro bundler
+- [x] use bashly to improve sh scripts
+- [x] add info about examples limitions - RN 72.0 with new metro bundler
 - [ ] enable linting for examples/shared
-- [ ] add docs for examples
+- [x] add docs for examples
 - [ ] test with one native module eg. react-native-is-maestro
 - [ ] add example with Native View
 - [ ] test / add scripts with Fabric
@@ -36,9 +36,3 @@ Repo provides a minimal setup for one synchronous function and one asynchronous 
 - [ ] basic tests for JavaScript / iOS / Android
 - [ ] limit sh scripts to specifics min versions (0.72)
 - [ ] add cool logo / publish!
-
-### Requirements:
-
-* @react-native/metro-config
-* React Native >= 0.72
-* Expo SDK 49 with dev-client

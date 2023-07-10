@@ -1,0 +1,44 @@
+name: generate
+help: Generate new RN project
+version: 0.1.0
+
+commands:
+- name: expo
+  alias: e
+  help: Generate new Expo project
+
+  args:
+  - name: sdk
+    required: false
+    validate: sdk_version_required
+    help: Specify version of the Expo SDK
+
+  flags:
+   - long: --fabric
+     short: -f
+     help: Should enable new architecture
+
+  examples:
+  - generate expo 49 --fabric
+  - generate expo --f
+  - generate expo
+
+- name: bare
+  alias: b
+  help: Generate new bare project
+
+  args:
+  - name: version
+    required: false
+    validate: rn_version_required
+    help: Specify version of the React Native
+
+  flags:
+  - long: --fabric
+    short: -f
+    help: Should enable new architecture
+
+  examples:
+      - generate bare 0.72 --fabric
+      - generate bare --f
+      - generate bare

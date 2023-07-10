@@ -4,8 +4,7 @@
   "description": "Minimal monorepo setup for your next React Native library",
   "scripts": {
     "generate:package": "bob build",
-    "generate:bare": "./scripts/generate-bare.sh",
-    "generate:expo": "./scripts/generate-expo.sh",
+    "generate:example": "./scripts/generate",
     "check:tsc": "node_modules/typescript/bin/tsc --noEmit",
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "precommit": "concurrently 'yarn check:tsc' 'yarn check:lint'",
