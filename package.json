@@ -9,7 +9,7 @@
     "check:lint": "eslint \"**/*.{js,ts,tsx}\"",
     "precommit": "concurrently 'yarn check:tsc' 'yarn check:lint'",
     "prepare": "husky install",
-    "release": "release-it patch --preRelease=alpha"
+    "release": "release-it patch --preRelease=beta"
   },
   "codegenConfig": {
     "name": "EasyLibPackage",
