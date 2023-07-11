@@ -9,13 +9,13 @@ In order to speed up the tests and upgrade process, examples are generated dynam
 yarn generate:example bare
 
 # generate example with specified React Native version
-yarn generate:example bare --version 0.71.0
+yarn generate:example bare --version 0.72.0
 
 # generate example with most recent expo version
 yarn generate:example expo
 
 # generate example with specified Expo SDK
-yarn generate:example expo --sdk 48
+yarn generate:example expo --sdk 49
 
 # enable new architecture
 yarn generate:example bare --fabric

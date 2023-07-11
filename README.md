@@ -22,7 +22,7 @@ Repo provides a minimal setup for one synchronous function and one asynchronous 
 ### Beta
 - [x] use bashly to improve sh scripts
 - [x] add info about examples limitions - RN 72.0 with new metro bundler
-- [ ] enable linting for examples/shared
+- [x] enable linting for examples/shared
 - [x] add docs for examples
 - [ ] test with one native module eg. react-native-is-maestro
 - [ ] add example with Native View
