@@ -24,9 +24,9 @@ Repo provides a minimal setup for one synchronous function and one asynchronous 
 - [x] add info about examples limitions - RN 72.0 with new metro bundler
 - [x] enable linting for examples/shared
 - [x] add docs for examples
+- [ ] test / add scripts with Fabric
 - [ ] test with one native module eg. react-native-is-maestro
 - [ ] add example with Native View
-- [ ] test / add scripts with Fabric
 
 ### RC
 - [ ] add generator to generate new library module/view

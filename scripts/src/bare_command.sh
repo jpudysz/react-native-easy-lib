@@ -1,4 +1,3 @@
-# todo handle fabric flag
 version=${args[version]}
 fabric=${args[--fabric]}
 
@@ -28,10 +27,12 @@ echo "✂️  Copying shared folder"
 cp -rp "$app_folder"/* .
 find "$bare_folder" -type f -exec cp -p {} . \;
 
-echo "🔗  Linking native code"
+RCT_NEW_ARCH_ENABLED=$fabric npx pod-install
 
-yarn link react-native-easy-lib
-npx pod-install
+if [[ "$fabric" == 1 ]]; then
+  echo "🚀 Enabling new architecture"
+fi
+
+node ../../scripts/src/bare-arch-switcher.js dir=$folder_name fabric=$fabric
 
 echo "⭐ Done ⭐"
-

@@ -1,9 +1,5 @@
 package com.easylibpackage
 
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
-import android.os.Build
-
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactMethod

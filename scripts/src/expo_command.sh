@@ -1,4 +1,3 @@
-# todo handle fabric flag
 sdk=${args[sdk]}
 fabric=${args[--fabric]}
 
@@ -28,11 +27,14 @@ echo "✂️  Copying shared folder"
 cp -rp "$app_folder"/* .
 find "$expo_folder" -type f -exec cp -p {} . \;
 
-echo "🔗  Linking native code"
+npx expo install expo-build-properties
 
-yarn link react-native-easy-lib
+if [[ "$fabric" == 1 ]]; then
+  echo "🚀 Enabling new architecture"
+fi
 
-# remove main in package.json to point to copied index.js
-node -e "const fs = require('fs'); const package = JSON.parse(fs.readFileSync('./package.json')); delete package.main; fs.writeFileSync('./package.json', JSON.stringify(package, null, 2));"
+node ../../scripts/src/expo-arch-switcher.js dir=$folder_name fabric=$fabric
+node ../../scripts/src/expo-remove-main.js
+cd android && ./gradlew generateCodegenArtifactsFromSchema && cd ..
 
 echo "⭐ Done ⭐"

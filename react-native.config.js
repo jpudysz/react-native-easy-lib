@@ -3,7 +3,8 @@ module.exports = {
     dependency: {
         platforms: {
             android: {
-                sourceDir: './lib/android'
+                sourceDir: './lib/android',
+                libraryName: 'EasyLibModule'
             }
         }
     }
