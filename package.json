@@ -20,7 +20,7 @@
     }
   },
   "react-native-builder-bob": {
-    "source": "src",
+    "source": "codegen",
     "output": "generated",
     "targets": [
       "commonjs",

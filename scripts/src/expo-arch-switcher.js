@@ -30,6 +30,12 @@ const newConfig = {
     ...appConfig,
     expo: {
         ...appConfig.expo,
+        ios: {
+            bundleIdentifier: 'org.example.ios'
+        },
+        android: {
+            package: 'com.example.android'
+        },
         plugins: [
             ...plugins,
             [
