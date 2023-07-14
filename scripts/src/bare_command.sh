@@ -34,5 +34,6 @@ if [[ "$fabric" == 1 ]]; then
 fi
 
 node ../../scripts/src/bare-arch-switcher.js dir=$folder_name fabric=$fabric
+cd android && ./gradlew generateCodegenArtifactsFromSchema && cd ..
 
 echo "⭐ Done ⭐"

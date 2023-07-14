@@ -35,6 +35,5 @@ fi
 
 node ../../scripts/src/expo-arch-switcher.js dir=$folder_name fabric=$fabric
 node ../../scripts/src/expo-remove-main.js
-cd android && ./gradlew generateCodegenArtifactsFromSchema && cd ..
 
 echo "⭐ Done ⭐"

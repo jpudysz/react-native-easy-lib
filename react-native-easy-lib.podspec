@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "12.4" }
   s.source       = { :git => "https://github.com/jpudysz/react-native-easy-lib.git", :tag => "#{s.version}" }
 
-  s.source_files = "lib/ios/**/*.{h,m,mm,swift}"
+  s.source_files = "ios/**/*.{h,m,mm,swift}"
 
   if new_arch_enabled
     s.pod_target_xcconfig = {

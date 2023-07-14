@@ -3,7 +3,7 @@ buildscript {
         rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
     }
 
-    def kotlin_version = safeExtGet('kotlinVersion', '1.6.10')
+    def kotlin_version = safeExtGet('kotlinVersion', '1.8.10')
 
     repositories {
         google()

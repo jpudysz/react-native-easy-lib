@@ -271,7 +271,6 @@ generate_expo_command() {
 
   node ../../scripts/src/expo-arch-switcher.js dir=$folder_name fabric=$fabric
   node ../../scripts/src/expo-remove-main.js
-  cd android && ./gradlew generateCodegenArtifactsFromSchema && cd ..
 
   echo "⭐ Done ⭐"
 
@@ -316,6 +315,7 @@ generate_bare_command() {
   fi
 
   node ../../scripts/src/bare-arch-switcher.js dir=$folder_name fabric=$fabric
+  cd android && ./gradlew generateCodegenArtifactsFromSchema && cd ..
 
   echo "⭐ Done ⭐"
 

@@ -14,13 +14,13 @@
   "codegenConfig": {
     "name": "EasyLibPackage",
     "type": "modules",
-    "jsSrcsDir": "lib",
+    "jsSrcsDir": "codegen",
     "android": {
       "javaPackageName": "com.easylibpackage"
     }
   },
   "react-native-builder-bob": {
-    "source": "lib",
+    "source": "src",
     "output": "generated",
     "targets": [
       "commonjs",
@@ -34,15 +34,15 @@
     ]
   },
   "files": [
-    "lib",
+    "codegen",
     "generated",
     "react-native-easy-lib.podspec",
-    "!lib/android/build",
-    "!lib/ios/build",
-    "!lib/android/gradle",
-    "!lib/android/gradlew",
-    "!lib/android/gradlew.bat",
-    "!lib/android/local.properties"
+    "!android/build",
+    "!ios/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties"
   ],
   "keywords": [
     "react-native",
@@ -57,7 +57,7 @@
   "main": "./generated/commonjs/index",
   "module": "./generated/module/index",
   "types": "./generated/typescript/index.d.ts",
-  "react-native": "./lib/index",
+  "react-native": "./codegen/index",
   "repository": "https://github.com/jpudysz/react-native-easy-lib",
   "author": "Jacek Pudysz <jacekpudysz@gmail.com> (https://github.com/jpudysz)",
   "license": "MIT",
